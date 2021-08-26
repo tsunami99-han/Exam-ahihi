@@ -1,0 +1,23 @@
+<h4>Bạn có muốn tiếp tục xóa?</h4>
+<form [formGroup]="bookForm" (ngSubmit)="delete(bookForm.value.id)">
+  <table>
+    <tr>
+      <td>Id</td>
+      <td>{{bookForm.value.id}}</td>
+    </tr>
+    <tr>
+      <td>Tên sách</td>
+      <td><input type="text" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Tác giả</td>
+      <td><input type="text" formControlName="author"></td>
+    </tr>
+    <tr>
+      <td>Mô tả</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr><td colspan="2"><button>Xóa</button></td></tr>
+  </table>
+</form>
+

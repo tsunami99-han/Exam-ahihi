@@ -1,0 +1,19 @@
+<table class="table" border="1">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Tên Sách</th>
+    <th scope="col">Tác giả</th>
+    <th scope="col" colspan="2">Tác vụ</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books;index as i">
+    <th scope="row">{{i +1}}</th>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+    <td><a [routerLink]="['/books/edit',book.id]">Sửa</a></td>
+    <td><a [routerLink]="['/books/delete',book.id]">Xóa</a></td>
+  </tr>
+  </tbody>
+</table>
